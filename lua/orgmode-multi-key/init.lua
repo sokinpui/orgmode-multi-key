@@ -81,12 +81,13 @@ M.setup = function (settings)
                end,
                noremap = true
             })
-            vim.api.nvim_buf_set_keymap( 0, 'n', "<2-LeftMouse>", "", {
+            vim.api.nvim_buf_set_keymap( 0, 'n', "<LeftMouse>", "", {
                callback = function ()
                    toggle_org_item()
                end,
                noremap = true
             })
+            vim.keymap.set("n", "<RightMouse>", "<Cmd>b#<Cr>", {noremap = true, buffer = true, silent = true})
         end
     })
 end
