@@ -81,6 +81,12 @@ M.setup = function (settings)
                end,
                noremap = true
             })
+            vim.api.nvim_buf_set_keymap( 0, 'n', "<2-LeftMouse>", "", {
+               callback = function ()
+                   toggle_org_item()
+               end,
+               noremap = true
+            })
         end
     })
 end
